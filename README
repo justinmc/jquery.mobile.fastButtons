@@ -1,0 +1,13 @@
+jquery.mobile.fastButtons.js
+Justin McCandless
+justinmccandless.com
+jQuery 1.6.4+
+jQueryMobile 1.0.1+
+
+This jQuery Mobile plugin makes click events faster, especially iOS.  By default, the 'click' event is used.  This event has a significant delay in iOS in order to distinguish it from other events.  In native apps, however, clicking a button happens significantly faster.  So, this plugin simply replaces 'click' events on document with jQueryMobile's 'vclick'.
+
+
+Usage:
+
+Simply include this file after jQueryMobile.
+
