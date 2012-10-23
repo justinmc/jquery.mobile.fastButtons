@@ -2,7 +2,7 @@
 // Justin McCandless
 // justinmccandless.com
 // jQuery 1.6.4+
-// jQueryMobile 1.0.1+
+// jQuery Mobile 1.0.1+
 
 // This jQuery Mobile plugin makes click events faster, especially iOS
 // It does this by simply replacing 'click' events on document with 'vclick'
