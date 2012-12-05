@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery.mobile.fastButtons.js Metrics - Without jquery.mobile.fastButtons</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+	</head>
+	<body>
+		<div data-role="page">
+
+			<div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false">
+				<h1>jquery.mobile.fastButtons.js Metrics</h1>
+			</div><!-- /header -->
+
+			<div data-role="content">	
+				<h2>Test your browser's click event speed</h2>
+				<p>
+					Click Start to measure the response times of the click and vclick events in your browser, normalized by the mouseup/touchstart events (whichever is faster, depends on your device).
+				</p>
+				<button id="start">Start</button>
+				<button id="reset">Reset</button>
+				<br /><br />
+				mouseup/touchstart: <span id="up">Waiting...</span>
+				<br />
+				click: <span id="click">Waiting...</span>
+				<br />
+				vclick: <span id="vclick">Waiting...</span>
+				<br /><br /><br /><br />
+				<p>
+					On the desktop, click and vclick should respond after about the same delay.  On iOS however, vclick is signficantly faster than click because iOS puts in a 300ms+ delay for click.
+				</p>
+				<br />
+				<h2>What jQuery.mobile.fastButtons does</h2>
+				<p>
+					jQuery mobile uses click events by default on its buttons, resulting in a slow experience in some environments like iOS.  This plugin simply swaps these events with vclick events, so that you'll always get the fast response time.
+				</p>
+				<br />
+				<h2>Test it out</h2>
+				<p>
+					The page you are on right now does not implement jQuery.mobile.fastButtons.  Try navigating to a new page using the button below, and notice the delay that occurs if you're using iOS.
+				</p>
+				<br /><br />
+				<a href="index_fast.html" data-role="button">Go to a new page... slowly</a>
+			</div><!-- /content -->
+		</div>
+	</body>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script>
+
+		$(document).ready(function() {
+
+			var time_click, time_up;
+			$("#start").on("touchstart", function() {
+				time_up = new Date().getTime();
+				$("#up").html("Touchstart registered at time 0");
+			});
+
+			$("#start").on("mouseup", function() {
+				if (time_up == null) {
+					time_up = new Date().getTime();
+					$("#up").html("Mouseup registered at time 0");
+				}
+			});
+
+			$("#start").on("click", function() {
+				time_click = new Date().getTime();
+				$("#click").html("Click registered after " + (time_click - time_up) + " milliseconds");
+			});
+
+			$("#start").on("vclick", function() {
+				time_click = new Date().getTime();
+				$("#vclick").html("vclick registered after " + (time_click - time_up) + " milliseconds");
+			});
+
+			$("#reset").on("click", function() {
+				time_click = null;
+				time_up = null;
+
+				$("#up").html("Waiting...");
+				$("#click").html("Waiting...");
+				$("#vclick").html("Waiting...");
+			});
+		});
+
+	</script>
+</html>
