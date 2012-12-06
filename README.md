@@ -62,19 +62,18 @@ Included in the repository are two html files.  These allow you to compare the r
 	</tr>
 	<tr>
 	    <td>Mobile Safari, iOS 6.0 iPhone Simulator</td>
-	    <td>todo</td>
-		<td>todo</td>
+	    <td>402</td>
+		<td>48</td>
 	</tr>
 	<tr>
 	    <td>Mobile Safari, iOS 6.0 iPhone Simulator</td>
-	    <td>todo</td>
-		<td>todo</td>
+	    <td>410</td>
+		<td>56</td>
 	</tr>
 	<tr>
 	    <td>Mobile Safari, iOS 6.0 iPhone Simulator</td>
-	    <td>todo</td>
-		<td>todo</td>
+	    <td>434</td>
+		<td>80</td>
 	</tr>
 </table>
-
 

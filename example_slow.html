@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery.mobile.fastButtons.js Example - With jquery.mobile.fastButtons</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+	</head>
+	<body>
+		<div data-role="page" id="slow1">
+
+			<div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false">
+				<a href="index.html" data-ajax="false">Back to Metrics</a>
+				<h1>jquery.mobile.fastButtons.js Slow Example Page 1</h1>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<h2>This Page Does NOT Implement jquery.mobile.fastButtons</h2>
+				<p>
+					That click event should have been the default jQuery Mobile click event, which is very slow in environments like iOS.
+				</p>
+				<p>
+					You can transition back again using the button below, or try the fast example page again below to compare.
+				</p>
+				<br /><br />
+				<a href="#slow2" data-role="button">Go to a new page slowly...</a>
+				<br /><br /><br /><br />
+				<h2>Want to see what the fast way is like again?</h2>
+				<p>
+					Click the button below to go to the example page that does implement jquery.mobile.fastButtons.
+				</p>
+				<br />
+				<a href="example_fast.html" data-ajax="false" data-role="button">Go to the fast example page</a>
+			</div><!-- /content -->
+
+		</div><!-- /page -->
+		
+		<div data-role="page" id="slow2">
+
+			<div data-role="header" data-id="header" data-position="fixed" data-tap-toggle="false">
+				<a href="index.html" data-ajax="false">Back to Metrics</a>
+				<h1>jquery.mobile.fastButtons.js Slow Example Page 2</h1>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<h2>This Page Does NOT Implement jquery.mobile.fastButtons</h2>
+				<p>
+					This html file is using the default slow click event from jQuery Mobile.
+				</p>
+				<p>
+					Try transitioning to another page using a button that has not been modified by jquery.mobile.fastButtons.
+				</p>
+				<br /><br />
+				<a href="#slow1" data-role="button">Go to a new page slowly...</a>
+				<br /><br /><br /><br />
+				<h2>Want to see what the fast way is like again?</h2>
+				<p>
+					Click the button below to go to the example page that does implement jquery.mobile.fastButtons.
+				</p>
+				<br />
+				<a href="example_fast.html" data-ajax="false" data-role="button">Go to the fast example page</a>
+			</div>	
+
+		</div><!-- /page -->
+	</body>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</html>
+
+
