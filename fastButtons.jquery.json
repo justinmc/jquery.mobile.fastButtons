@@ -1,0 +1,33 @@
+{
+    "name" : "fastButtons",
+    "version" : "1.0.0",
+    "title" : "jQuery Fast Buttons",
+    "author" : {
+        "name" : "Justin McCandless",
+        "email" : "justinjmccandless@gmail.com",
+        "url" : "http://www.justinmccandless.com"
+    },
+    "description" : "Removes the 300ms delay in some browsers (like iOS) by simply replacing default click events with jQuery Mobile's vclick",
+    "keywords" : [
+        "vclick",
+        "fast",
+        "mobile",
+        "speed",
+        "click",
+        "delay"
+    ],
+    "licenses" : [
+        {
+            "type" : "MIT",
+            "url" : "https://raw.github.com/justinmc/jQuery-Open-Carousel/master/LICENSE.md"
+        }
+    ],
+    "docs" : "https://github.com/justinmc/jquery.mobile.fastButtons/blob/master/README.md",
+    "demo" : "http://www.justinmccandless.com/demos/jquery.mobile.fastButtons/index.html",
+    "bugs" : "https://github.com/justinmc/jquery.mobile.fastButtons/issues",
+    "dependencies" : {
+        "jquery" : ">=1.6.4",
+        "jquerymobile" : ">=1.0.1"
+    }
+}
+
