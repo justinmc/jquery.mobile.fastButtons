@@ -1,7 +1,7 @@
 {
     "name" : "fastButtons",
-    "version" : "1.0.0",
-    "title" : "jQuery Fast Buttons",
+    "version" : "1.0.1",
+    "title" : "jQuery Mobile Fast Buttons",
     "author" : {
         "name" : "Justin McCandless",
         "email" : "justinjmccandless@gmail.com",
@@ -9,6 +9,7 @@
     },
     "description" : "Removes the 300ms delay in some browsers (like iOS) by simply replacing default click events with jQuery Mobile's vclick",
     "keywords" : [
+        "jquerymobile",
         "vclick",
         "fast",
         "mobile",
