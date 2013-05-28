@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>jquery.mobile.fastButtons.js Metrics</title>
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
 	</head>
 	<body>
 		<div data-role="page">
@@ -42,47 +42,48 @@
 				<br /><br />
 				<a href="example_fast.html" data-ajax="false" data-role="button">Go to the example pages</a>
 			</div><!-- /content -->
-		</div>
+        </div>
+
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.js"></script>
+        <script>
+
+            $(document).ready(function() {
+
+                var time_click, time_up;
+                $("#start").on("touchstart", function() {
+                    time_up = new Date().getTime();
+                    $("#up").html("Touchstart registered at time 0");
+                });
+
+                $("#start").on("mouseup", function() {
+                    if (time_up == null) {
+                        time_up = new Date().getTime();
+                        $("#up").html("Mouseup registered at time 0");
+                    }
+                });
+
+                $("#start").on("click", function() {
+                    time_click = new Date().getTime();
+                    $("#click").html("Click registered after " + (time_click - time_up) + " milliseconds");
+                });
+
+                $("#start").on("vclick", function() {
+                    time_click = new Date().getTime();
+                    $("#vclick").html("vclick registered after " + (time_click - time_up) + " milliseconds");
+                });
+
+                $("#reset").on("click", function() {
+                    time_click = null;
+                    time_up = null;
+
+                    $("#up").html("Waiting...");
+                    $("#click").html("Waiting...");
+                    $("#vclick").html("Waiting...");
+                });
+            });
+
+        </script>
 	</body>
-	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-	<script>
-
-		$(document).ready(function() {
-
-			var time_click, time_up;
-			$("#start").on("touchstart", function() {
-				time_up = new Date().getTime();
-				$("#up").html("Touchstart registered at time 0");
-			});
-
-			$("#start").on("mouseup", function() {
-				if (time_up == null) {
-					time_up = new Date().getTime();
-					$("#up").html("Mouseup registered at time 0");
-				}
-			});
-
-			$("#start").on("click", function() {
-				time_click = new Date().getTime();
-				$("#click").html("Click registered after " + (time_click - time_up) + " milliseconds");
-			});
-
-			$("#start").on("vclick", function() {
-				time_click = new Date().getTime();
-				$("#vclick").html("vclick registered after " + (time_click - time_up) + " milliseconds");
-			});
-
-			$("#reset").on("click", function() {
-				time_click = null;
-				time_up = null;
-
-				$("#up").html("Waiting...");
-				$("#click").html("Waiting...");
-				$("#vclick").html("Waiting...");
-			});
-		});
-
-	</script>
 </html>
 
