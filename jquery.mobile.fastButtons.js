@@ -24,4 +24,7 @@ var fastButtons = {
 	}
 };
 
-fastButtons.replace();
+// Call fastbuttons and replace all click events with vclick
+$(document).ready(function() {
+    fastButtons.replace();
+});
